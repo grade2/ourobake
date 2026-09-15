@@ -70,11 +70,7 @@ The node group has 6 inputs and 1 output, and the material chains a *Color Attri
 
 Starting a bake requires a zeroed attribute and equal values for `Iterations` and `采样次数`. The target `xyzrgb_dragon` also needs selection, with the mode set to Object Mode. Both counts already hold 256 in the shipped scene.
 
-```python
-import bpy
-ca = bpy.data.objects["xyzrgb_dragon"].data.color_attributes["厚度"]
-ca.data.foreach_set("color", [0.0] * (len(ca.data) * 4))
-```
+Zeroing is done in the interface: with the link between the `群组` node and `材质输出` disconnected, one bake pass writes (0,0,0,1) into the four channels, after which the link is restored. A newly created color attribute is filled with white, so deleting and recreating the attribute does not perform a reset.
 
 Render and bake settings match the values stored in the scene:
 

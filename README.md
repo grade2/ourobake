@@ -70,11 +70,7 @@ $$R'=(1-f)R+ft,\qquad G'=(1-f)G+f\kappa$$
 
 烘焙的启动条件为属性清零，并要求 `Iterations` 与 `采样次数` 取同一数值。目标对象 `xyzrgb_dragon` 需要处于选中状态，当前模式为物体模式。示例工程中这两处次数都已经设为 256。
 
-```python
-import bpy
-ca = bpy.data.objects["xyzrgb_dragon"].data.color_attributes["厚度"]
-ca.data.foreach_set("color", [0.0] * (len(ca.data) * 4))
-```
+清零在界面上完成：`群组` 节点与 `材质输出` 节点之间的连线断开后烘焙一趟，属性的四个通道即被写成 (0,0,0,1)，连线随后恢复。新建的颜色属性默认填充为白色，删除并重建属性无法完成清零。
 
 渲染与烘焙设置与工程内保存的值一致：
 
