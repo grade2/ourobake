@@ -24,21 +24,21 @@ $$n=\frac{B}{\varepsilon},\qquad i=n+1,\qquad f=\frac{1}{n+1},\qquad B'=B+\varep
 
 The sample direction lies inside a cone that opens with progress and narrows where curvature is high:
 
-$$s=\frac{i}{N_s},\qquad c=\operatorname{clamp}\left(w\,s\,\operatorname{mix}\left(1,\ \frac{1}{1+LG},\ s^{2}\right),\ 0,\ 1\right)$$
+$$s=\frac{i}{N_s},\qquad c=\mathrm{clamp}\left(w\,s\,\mathrm{mix}\left(1,\ \frac{1}{1+LG},\ s^{2}\right),\ 0,\ 1\right)$$
 
 The azimuth follows a golden-ratio sequence, and per-point white noise supplies a different phase origin at each vertex:
 
 $$\theta=\pi\cdot 0.61805\cdot\left(i+2\pi\cdot\mathrm{noise}_{3D}(P)\right)$$
 
-$$\hat e=\operatorname{normalize}\left(\hat B\cos\theta+\hat T\sin\theta\right),\qquad \hat B=\operatorname{normalize}(N\times T)$$
+$$\hat e=\mathrm{normalize}\left(\hat B\cos\theta+\hat T\sin\theta\right),\qquad \hat B=\mathrm{normalize}(N\times T)$$
 
-$$d=\operatorname{normalize}\left((1-c)(-N)+c\,\hat e\right)$$
+$$d=\mathrm{normalize}\left((1-c)(-N)+c\,\hat e\right)$$
 
 $$t=\mathrm{SelfHit}\left(P-oN,\ d,\ L\right)\cdot\left(\mathrm{HitDistance}+o\right)$$
 
 Curvature comes from the sagitta construction. The probe azimuth is $\varphi=\pi\cdot 0.61805\cdot i$, the two probe points sit at $P_\pm=P\pm h\hat e_c$, and each point fires rays of length $8h$ along $\pm N$ with a miss recorded as 0:
 
-$$h=\operatorname{clamp}\left(R'k,\ 0.01,\ 0.25\right)$$
+$$h=\mathrm{clamp}\left(R'k,\ 0.01,\ 0.25\right)$$
 
 $$\kappa=\frac{\Sigma d}{h^{2}+\frac{1}{4}(\Sigma d)^{2}},\qquad \Sigma d=d_{1}+d_{2}+d_{3}+d_{4}$$
 

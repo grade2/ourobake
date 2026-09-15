@@ -24,21 +24,21 @@ $$n=\frac{B}{\varepsilon},\qquad i=n+1,\qquad f=\frac{1}{n+1},\qquad B'=B+\varep
 
 采样方向位于圆锥内，锥角随进度张开，并在曲率高处收窄：
 
-$$s=\frac{i}{N_s},\qquad c=\operatorname{clamp}\left(w\,s\,\operatorname{mix}\left(1,\ \frac{1}{1+LG},\ s^{2}\right),\ 0,\ 1\right)$$
+$$s=\frac{i}{N_s},\qquad c=\mathrm{clamp}\left(w\,s\,\mathrm{mix}\left(1,\ \frac{1}{1+LG},\ s^{2}\right),\ 0,\ 1\right)$$
 
 方位角由黄金比序列给出，逐点白噪声提供不同的相位起点：
 
 $$\theta=\pi\cdot 0.61805\cdot\left(i+2\pi\cdot\mathrm{noise}_{3D}(P)\right)$$
 
-$$\hat e=\operatorname{normalize}\left(\hat B\cos\theta+\hat T\sin\theta\right),\qquad \hat B=\operatorname{normalize}(N\times T)$$
+$$\hat e=\mathrm{normalize}\left(\hat B\cos\theta+\hat T\sin\theta\right),\qquad \hat B=\mathrm{normalize}(N\times T)$$
 
-$$d=\operatorname{normalize}\left((1-c)(-N)+c\,\hat e\right)$$
+$$d=\mathrm{normalize}\left((1-c)(-N)+c\,\hat e\right)$$
 
 $$t=\mathrm{SelfHit}\left(P-oN,\ d,\ L\right)\cdot\left(\mathrm{HitDistance}+o\right)$$
 
 曲率由弧矢构造测得。探针方位角为 $\varphi=\pi\cdot 0.61805\cdot i$，两个探针点位于 $P_\pm=P\pm h\hat e_c$，各自沿 $\pm N$ 发出长度为 $8h$ 的射线，未命中记为 0：
 
-$$h=\operatorname{clamp}\left(R'k,\ 0.01,\ 0.25\right)$$
+$$h=\mathrm{clamp}\left(R'k,\ 0.01,\ 0.25\right)$$
 
 $$\kappa=\frac{\Sigma d}{h^{2}+\frac{1}{4}(\Sigma d)^{2}},\qquad \Sigma d=d_{1}+d_{2}+d_{3}+d_{4}$$
 
