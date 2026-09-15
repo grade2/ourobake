@@ -93,7 +93,7 @@ After the run the `厚度` attribute holds $R$ as thickness in meters, $G$ as cu
 
 ## Example
 
-The dragon mesh has 124,943 vertices and 249,881 triangles, scaled to 0.01 on import for a largest dimension of 2.02 m. The source file contains 123 loose vertices belonging to no face, and removing them leaves effective geometry at exactly one hundredth of the source size.
+The dragon mesh has 124,943 vertices and 249,881 triangles, scaled to 0.01 on import for a largest dimension of 2.02 m.
 
 Attribute statistics after 256 passes:
 
