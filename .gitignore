@@ -1,0 +1,22 @@
+# ── 开发期验证与调试产物，不随仓库发布 ──────────────────────────────
+# scratch / verification artifacts produced while developing this scene
+_audit/
+
+# ── 原始 Stanford 模型不随仓库分发：请从官方页面下载（见 README §6.1）──
+# the raw Stanford models are not redistributed here; download them from the
+# official page instead (see README §6.1)
+models/
+
+# ── Blender 自动备份文件 ─────────────────────────────────────────────
+# Blender auto-backups
+*.blend1
+*.blend2
+*.blend3
+*.blend[0-9][0-9]
+
+# ── 常见垃圾文件 ────────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
+__pycache__/
+*.pyc

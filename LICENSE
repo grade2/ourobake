@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 grade2 (https://github.com/grade2)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+NOTE ON THIRD-PARTY CONTENT / 第三方内容说明
+
+The MIT license above covers the node group "厚度&曲率烘焙", the material and
+bake setup authored in curve.blend, and iterative_baker.py.
+
+It does NOT cover the "xyzrgb_dragon" mesh embedded in curve.blend, which is
+third-party material from the Stanford 3D Scanning Repository
+(https://graphics.stanford.edu/data/3Dscanrep/). That model is provided for
+research use and free redistribution WITH ATTRIBUTION to the Stanford Computer
+Graphics Laboratory, and may NOT be used commercially. See README.md §11.
+
+上述 MIT 许可仅覆盖节点组「厚度&曲率烘焙」、curve.blend 中作者自制的材质与
+烘焙设置，以及 iterative_baker.py；不覆盖 curve.blend 内嵌的 xyzrgb_dragon
+网格——该网格来自 Stanford 3D Scanning Repository，须署名 Stanford Computer
+Graphics Laboratory，仅供研究与免费再分发，不得用于商业用途。详见 README §11。
